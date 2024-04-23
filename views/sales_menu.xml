@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="fetch_product" name="Fetch Product" parent="sale.product_menu_catalog" action="fetch_product_from_odoo_16_action" sequence="40"/>
+</odoo>

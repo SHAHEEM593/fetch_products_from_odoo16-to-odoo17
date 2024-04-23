@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="fetch_product_from_odoo_16" model="ir.ui.view">
+        <field name="name">fetch.product.from.odoo</field>
+        <field name="model">fetch.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <span>from:</span>
+                            <h5>Odoo 16</h5>
+                            <field name="database1"/>
+                            <field name="local_host"/>
+                            <field name="user_name1"/>
+                            <field name="password1"/>
+                        </group>
+                        <group>
+                            <span>To:</span>
+                            <h5>Odoo 17</h5>
+                            <field name="database2"/>
+                            <field name="user_name2"/>
+                            <field name="password2"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="fetch_product" string="Fetch Product" type="object" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel" class="btn-secondary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="fetch_product_from_odoo_16_action" model="ir.actions.act_window">
+        <field name="name">Fetch Product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">fetch.product</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="fetch_product_from_odoo_16"/>
+    </record>
+
+</odoo>
